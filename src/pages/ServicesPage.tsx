@@ -9,7 +9,7 @@ interface ServicesPageProps {
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="pt-[88px] md:pt-[96px] pb-16 bg-white text-brand-dark min-h-screen">
+    <div className="pt-[88px] md:pt-[96px] bg-white text-brand-dark min-h-screen flex flex-col justify-between">
       {/* Services Banner */}
       <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">

@@ -37,7 +37,7 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-[88px] md:pt-[96px] pb-20 bg-white text-brand-dark min-h-screen">
+    <div className="pt-[88px] md:pt-[96px] bg-white text-brand-dark min-h-screen flex flex-col justify-between">
       
       {/* Contact Header Banner */}
       <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">

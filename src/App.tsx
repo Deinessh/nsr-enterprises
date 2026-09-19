@@ -11,6 +11,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
 
 import { FaqPage } from './pages/FaqPage';
@@ -85,6 +86,7 @@ export const AppContent: React.FC = () => {
           <Route path="/services" element={<ServicesPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
           <Route path="/projects" element={<ProjectsPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/gallery" element={<GalleryPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

@@ -11,21 +11,21 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
   const [showTamil, setShowTamil] = useState(false);
 
   return (
-    <div className="pt-[88px] md:pt-[96px] pb-16 bg-white text-brand-dark min-h-screen">
+    <div className="pt-[88px] md:pt-[96px] bg-white text-brand-dark min-h-screen flex flex-col justify-between">
       
-      {/* About Hero Banner (Centered Alignment) */}
+      {/* About Hero Banner (Expanded Width Header) */}
       <section className="py-16 lg:py-24 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-5xl mx-auto space-y-4">
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm">
               <Sparkles className="w-4 h-4 text-brand-blue" />
               <span className="text-xs font-extrabold uppercase tracking-wider">ABOUT NSR ENTERPRISES</span>
             </div>
             <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight leading-tight">
-              Pioneering <span className="text-brand-blue">Greenway Bio</span> Sanitation in Tamil Nadu
+              Pioneering <span className="text-brand-blue">Greenway Bio Sanitation</span> & Sewage Treatment in Tamil Nadu
             </h1>
-            <p className="text-xs sm:text-sm text-brand-muted leading-relaxed max-w-2xl mx-auto font-medium">
-              NSR Enterprises (Greenway Build & Bio Solutions) delivers non-filling bio septic tanks and decentralized sewage treatment systems engineered to protect groundwater and eliminate municipal lorry pumping permanently.
+            <p className="text-sm sm:text-base text-brand-muted leading-relaxed max-w-4xl mx-auto font-medium">
+              NSR Enterprises (Greenway Build & Bio Solutions) delivers certified non-filling bio septic tanks and decentralized sewage treatment systems engineered to preserve pristine groundwater, eliminate odors, and free property owners from municipal lorry pumping permanently.
             </p>
           </div>
         </div>

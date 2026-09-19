@@ -25,6 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Gallery', path: '/gallery' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -37,20 +38,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
       
-      {/* Top Information Strip (Light Blue Background) */}
-      <div className="bg-brand-blueSoft text-brand-dark border-b border-brand-blueBorder text-xs py-1.5 hidden md:block transition-all">
+      {/* Top Information Strip (Sky Blue Tint Background) */}
+      <div className="bg-[#D0E7FD] text-brand-dark border-b border-[#93C5FD]/60 text-xs py-1.5 hidden md:block transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <a 
               href={`tel:${COMPANY_INFO.phoneRaw}`} 
-              className="flex items-center space-x-2 text-brand-dark font-semibold hover:text-brand-blue transition-colors"
+              className="flex items-center space-x-2 text-brand-dark font-bold hover:text-brand-blue transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-blue" />
               <span>{COMPANY_INFO.phone}</span>
             </a>
             <a 
               href={`mailto:${COMPANY_INFO.email}`} 
-              className="flex items-center space-x-2 text-brand-dark font-semibold hover:text-brand-blue transition-colors"
+              className="flex items-center space-x-2 text-brand-dark font-bold hover:text-brand-blue transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-brand-blue" />
               <span>{COMPANY_INFO.email}</span>
@@ -58,11 +59,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
           
           <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2 text-brand-muted font-medium">
+            <div className="flex items-center space-x-2 text-slate-700 font-semibold">
               <MapPin className="w-3.5 h-3.5 text-brand-green" />
               <span>Urapakkam, Chengalpattu, Tamil Nadu</span>
             </div>
-            <div className="flex items-center space-x-1.5 bg-white text-brand-blue px-3 py-0.5 rounded-full border border-brand-blueBorder font-bold text-[11px] shadow-sm">
+            <div className="flex items-center space-x-1.5 bg-white text-brand-blue px-3 py-0.5 rounded-full border border-sky-300 font-extrabold text-[11px] shadow-sm">
               <ShieldCheck className="w-3.5 h-3.5 text-brand-green" />
               <span>Greenway Build & Bio Solutions</span>
             </div>
@@ -70,37 +71,42 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </div>
 
-      {/* Main Navigation Bar (Clean White Background, Compact Py-2) */}
+      {/* Main Navigation Bar (Sky Blue Matching Footer Background) */}
       <nav 
-        className={`w-full bg-white transition-all duration-300 border-b border-brand-blueBorder ${
+        className={`w-full bg-gradient-to-r from-[#E0F2FE] via-[#DCEEFE] to-[#BAE6FD] transition-all duration-300 border-b border-[#93C5FD] ${
           isScrolled 
-            ? 'py-2 shadow-md shadow-brand-blue/5' 
+            ? 'py-2 shadow-md shadow-sky-400/20 backdrop-blur-md' 
             : 'py-2.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          {/* Logo Sized to Fit Comfortably in Header */}
-          <Link to="/" className="flex items-center group py-0.5">
+          {/* Globe Logo Icon (Left) & Content Logo Text (Right) Side-by-Side */}
+          <Link to="/" className="flex items-center space-x-2.5 sm:space-x-3 group py-0.5">
             <img 
-              src="/nsr_logo_official.png" 
-              alt="NSR Enterprises Logo" 
-              className="h-12 sm:h-14 lg:h-16 w-auto max-h-16 object-contain group-hover:scale-105 transition-transform duration-300" 
+              src="/logo-icon.png" 
+              alt="NSR Globe Logo" 
+              className="h-10 sm:h-12 lg:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 flex-shrink-0" 
+            />
+            <img 
+              src="/logo_text_brand.png" 
+              alt="NSR Enterprises - Greenway Build & Bio Solutions" 
+              className="h-7 sm:h-9 lg:h-10 w-auto object-contain group-hover:scale-[1.02] transition-transform duration-300" 
             />
           </Link>
 
-          {/* Desktop Navigation Links (Includes FAQ) */}
-          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-1.5">
             {navLinks.map((link) => {
               const active = isActive(link.path);
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`px-3.5 py-1.5 rounded-xl text-sm font-bold transition-all duration-200 relative ${
+                  className={`px-3 py-1.5 rounded-xl text-sm font-extrabold transition-all duration-200 relative ${
                     active
-                      ? 'text-brand-blue bg-brand-blueSoft border border-brand-blueBorder shadow-sm'
-                      : 'text-brand-dark hover:text-brand-blue hover:bg-brand-blueSoft/60'
+                      ? 'text-brand-blue bg-white border border-sky-300 shadow-sm'
+                      : 'text-brand-dark hover:text-brand-blue hover:bg-white/60'
                   }`}
                 >
                   {link.name}

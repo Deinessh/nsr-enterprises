@@ -4,9 +4,10 @@ import { Sparkles } from 'lucide-react';
 
 export const FaqPage: React.FC = () => {
   return (
-    <div className="pt-[88px] md:pt-[96px] pb-20 bg-white text-brand-dark min-h-screen">
-      {/* Header Banner */}
-      <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm mb-8">
+    <div className="pt-[88px] md:pt-[96px] bg-white text-brand-dark min-h-screen flex flex-col justify-between">
+      <div>
+        {/* Header Banner */}
+        <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm mb-4">
             <Sparkles className="w-4 h-4 text-brand-blue" />
@@ -23,6 +24,7 @@ export const FaqPage: React.FC = () => {
 
       {/* Accordion Component (Single Header) */}
       <FaqAccordion showHeader={false} />
+      </div>
     </div>
   );
 };
