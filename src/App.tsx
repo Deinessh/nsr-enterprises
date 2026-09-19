@@ -13,6 +13,8 @@ import { ServiceDetailPage } from './pages/ServiceDetailPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ContactPage } from './pages/ContactPage';
 
+import { FaqPage } from './pages/FaqPage';
+
 // Scroll to top on route change component
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -36,7 +38,7 @@ export const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-offwhite text-brand-black flex flex-col font-sans selection:bg-brand-blue selection:text-white">
+    <div className="min-h-screen bg-white text-brand-dark flex flex-col justify-between font-sans selection:bg-brand-blue selection:text-white">
       
       <ScrollToTop />
 
@@ -44,13 +46,14 @@ export const AppContent: React.FC = () => {
       <Header onOpenQuoteModal={() => handleOpenQuoteModal()} />
 
       {/* Page Views Container */}
-      <main className="flex-grow">
+      <main className="flex-grow w-full">
         <Routes>
           <Route path="/" element={<HomePage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/about" element={<AboutPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/services" element={<ServicesPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
           <Route path="/projects" element={<ProjectsPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>

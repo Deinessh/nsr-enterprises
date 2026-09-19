@@ -38,10 +38,10 @@ export const ServiceDetailPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 bg-brand-offwhite min-h-screen text-brand-black">
+    <div className="pt-36 sm:pt-40 lg:pt-44 pb-20 bg-white min-h-screen text-brand-dark">
       
       {/* Top Breadcrumb Header */}
-      <div className="bg-brand-dark text-white py-12 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-brand-blue to-brand-green text-white py-14 relative overflow-hidden shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/services"

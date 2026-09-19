@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuoteModal }) => {
   return (
-    <section id="home" className="relative min-h-[90vh] pt-32 pb-16 lg:pt-40 lg:pb-24 flex items-center bg-gradient-to-b from-white via-brand-blueSoft/30 to-white overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] pt-36 sm:pt-44 lg:pt-48 pb-16 flex items-center bg-gradient-to-b from-white via-brand-blueSoft/30 to-white overflow-hidden">
       
       {/* Soft Ambient Background Elements */}
       <div className="absolute inset-0 z-0">

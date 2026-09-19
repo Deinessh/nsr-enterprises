@@ -53,25 +53,26 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 2: Navigation Links */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-display font-extrabold text-xs text-brand-dark uppercase tracking-wider">Navigation</h4>
-            <ul className="space-y-2 text-xs font-semibold text-brand-muted">
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="font-display font-extrabold text-base sm:text-lg text-brand-dark tracking-tight">Navigation</h4>
+            <ul className="space-y-2.5 text-sm font-semibold text-brand-muted">
               <li><Link to="/" className="hover:text-brand-blue transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-brand-blue transition-colors">About Us</Link></li>
               <li><Link to="/services" className="hover:text-brand-blue transition-colors">Services</Link></li>
               <li><Link to="/projects" className="hover:text-brand-blue transition-colors">Projects</Link></li>
+              <li><Link to="/faq" className="hover:text-brand-blue transition-colors">FAQ</Link></li>
               <li><Link to="/contact" className="hover:text-brand-blue transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Services Listing */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-display font-extrabold text-xs text-brand-dark uppercase tracking-wider">Our Services</h4>
-            <ul className="space-y-2 text-xs font-semibold text-brand-muted">
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="font-display font-extrabold text-base sm:text-lg text-brand-dark tracking-tight">Our Services</h4>
+            <ul className="space-y-2.5 text-sm font-semibold text-brand-muted">
               {SERVICES.map((s) => (
                 <li key={s.id}>
                   <Link to={`/services/${s.id}`} className="hover:text-brand-blue transition-colors flex items-center space-x-1.5">
-                    <span className="text-brand-green font-bold">•</span>
+                    <span className="text-brand-green font-extrabold">•</span>
                     <span>{s.title}</span>
                   </Link>
                 </li>
@@ -80,22 +81,22 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 4: Contact Details */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-display font-extrabold text-xs text-brand-dark uppercase tracking-wider">Registered Office</h4>
-            <div className="space-y-3 text-xs text-brand-muted">
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="font-display font-extrabold text-base sm:text-lg text-brand-dark tracking-tight">Registered Office</h4>
+            <div className="space-y-3.5 text-sm text-brand-muted">
               <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-brand-green flex-shrink-0 mt-0.5" />
-                <span className="font-medium text-brand-dark">{COMPANY_INFO.address}</span>
+                <MapPin className="w-4.5 h-4.5 text-brand-green flex-shrink-0 mt-0.5" />
+                <span className="font-semibold text-brand-dark leading-snug">{COMPANY_INFO.address}</span>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-brand-blue flex-shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="hover:text-brand-blue transition-colors font-bold text-brand-dark">
+                <Phone className="w-4.5 h-4.5 text-brand-blue flex-shrink-0" />
+                <a href={`tel:${COMPANY_INFO.phoneRaw}`} className="hover:text-brand-blue transition-colors font-extrabold text-brand-dark">
                   {COMPANY_INFO.phone}
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Mail className="w-4 h-4 text-brand-blue flex-shrink-0" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-brand-blue transition-colors font-semibold text-brand-dark">
+                <Mail className="w-4.5 h-4.5 text-brand-blue flex-shrink-0" />
+                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-brand-blue transition-colors font-bold text-brand-dark">
                   {COMPANY_INFO.email}
                 </a>
               </div>

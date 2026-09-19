@@ -8,18 +8,18 @@ interface ProjectsPageProps {
 
 export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="pt-28 pb-16">
+    <div className="pt-36 sm:pt-40 lg:pt-44 pb-16 bg-white text-brand-dark min-h-screen">
       {/* Projects Banner */}
-      <section className="bg-brand-dark text-white py-16 lg:py-20 relative overflow-hidden">
+      <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-brand-blue/30 border border-brand-blueLight/30 text-brand-blueLight mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span className="text-xs font-semibold uppercase tracking-wider">OUR PORTFOLIO</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm mb-4">
+            <Sparkles className="w-4 h-4 text-brand-blue" />
+            <span className="text-xs font-extrabold uppercase tracking-wider">OUR PORTFOLIO</span>
           </div>
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
-            Selected <span className="text-brand-blueLight">Projects & Installations</span>
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
+            Selected <span className="text-brand-blue">Projects & Installations</span>
           </h1>
-          <p className="text-sm sm:text-base text-white/70 mt-3 leading-relaxed">
+          <p className="text-xs sm:text-sm text-brand-muted mt-3 leading-relaxed max-w-2xl mx-auto font-medium">
             Browse our completed bio septic tank and sewage treatment installations across Tamil Nadu.
           </p>
         </div>

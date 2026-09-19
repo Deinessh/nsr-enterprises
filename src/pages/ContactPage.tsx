@@ -38,19 +38,19 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 bg-white text-brand-dark min-h-screen">
+    <div className="pt-36 sm:pt-40 lg:pt-44 pb-20 bg-white text-brand-dark min-h-screen">
       
       {/* Contact Header Banner */}
-      <section className="bg-gradient-to-r from-brand-blue to-brand-green text-white py-16 lg:py-20 relative overflow-hidden shadow-lg">
+      <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl relative z-10">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/20 border border-white/30 text-white mb-4 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm mb-4">
+            <Sparkles className="w-4 h-4 text-brand-blue" />
             <span className="text-xs font-extrabold uppercase tracking-wider">GET IN TOUCH</span>
           </div>
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight">
-            Contact <span className="text-yellow-300">NSR Enterprises</span>
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
+            Contact <span className="text-brand-blue">NSR Enterprises</span>
           </h1>
-          <p className="text-sm sm:text-base text-white/90 mt-3 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-brand-muted mt-3 leading-relaxed max-w-2xl mx-auto font-medium">
             Have questions about bio septic tank capacities or need an on-site survey? Our engineering team is ready to assist you.
           </p>
         </div>
