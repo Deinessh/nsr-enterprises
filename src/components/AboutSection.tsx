@@ -15,41 +15,41 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenQuoteModal }) 
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Visual Composition */}
+          {/* Left Column: Visual Composition with 3D Bio-Septic Render */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-soft group">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-blueBorder group">
               <img 
-                src="https://nsrenterprises.in/wp-content/uploads/2025/01/155-420x380.jpg" 
-                alt="NSR Enterprises Bio Septic Engineering" 
-                className="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+                src="/bio_septic_system_3d.jpg" 
+                alt="NSR Enterprises Bio Septic 3D Underground Engineering" 
+                className="w-full h-[400px] sm:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
               
               {/* Overlay Content Card */}
-              <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl glass-card-dark text-white border border-brand-accent/20">
+              <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-slate-900/90 backdrop-blur-md text-white border border-[#00D2FF]/40 shadow-xl">
                 <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-8 h-8 rounded-lg bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold text-sm">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D2FF] to-[#10B981] flex items-center justify-center text-slate-950 font-extrabold text-sm shadow-md">
                     NSR
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-base text-white">NSR Enterprises</h4>
-                    <span className="text-xs text-brand-accent">Chengalpattu & Urapakkam, Tamil Nadu</span>
+                    <span className="text-xs text-[#00D2FF] font-semibold">Chengalpattu & Urapakkam, Tamil Nadu</span>
                   </div>
                 </div>
-                <p className="text-xs text-white/80 leading-relaxed italic">
-                  "Providing lifelong solutions for domestic & commercial sewage challenges while preserving pristine groundwater."
+                <p className="text-xs text-slate-200 leading-relaxed italic font-medium">
+                  "Providing lifelong non-filling solutions for domestic & commercial sewage challenges while preserving pristine groundwater."
                 </p>
               </div>
             </div>
 
             {/* Decorative Floating Accent Badge */}
-            <div className="absolute -top-6 -right-6 hidden sm:flex items-center space-x-3 p-4 rounded-2xl bg-brand-dark text-white shadow-xl border border-brand-emerald/40 z-10">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-emerald to-brand-accent flex items-center justify-center text-brand-dark font-black font-display text-lg">
+            <div className="absolute -top-5 -right-5 hidden sm:flex items-center space-x-3 p-4 rounded-2xl bg-slate-900 text-white shadow-2xl border border-[#10B981]/50 z-10 animate-floatSmooth">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#10B981] via-[#00D2FF] to-[#F59E0B] flex items-center justify-center text-slate-950 font-extrabold font-display text-base shadow-md">
                 100%
               </div>
               <div>
-                <span className="text-xs font-bold text-white block">Eco-Conscious Tech</span>
-                <span className="text-[10px] text-brand-accent block">Groundwater Protection</span>
+                <span className="text-xs font-extrabold text-white block">Eco-Conscious Tech</span>
+                <span className="text-[10px] text-[#00D2FF] font-bold block">Groundwater Protection</span>
               </div>
             </div>
           </div>

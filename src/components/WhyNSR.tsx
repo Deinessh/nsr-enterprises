@@ -74,16 +74,16 @@ export const WhyNSR: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-white border border-brand-soft shadow-md hover:shadow-xl hover:border-brand-emerald/40 transition-all duration-300 flex items-start space-x-4 group"
+                  className="p-6 rounded-2xl bg-white border border-brand-blueBorder/80 shadow-md hover:shadow-xl hover:border-brand-blue transition-all duration-300 flex items-start space-x-4 group reveal-on-scroll cursor-pointer"
                 >
-                  <div className="p-3 rounded-xl bg-brand-emerald/10 text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-colors flex-shrink-0">
-                    <Icon className="w-6 h-6" />
+                  <div className="p-3.5 rounded-2xl bg-brand-blueSoft text-brand-blue border border-brand-blueBorder/60 group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all duration-300 flex-shrink-0 shadow-sm">
+                    <Icon className="w-6 h-6 stroke-[2.2]" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-brand-black group-hover:text-brand-emerald transition-colors">
+                    <h3 className="font-display font-bold text-lg text-brand-dark group-hover:text-brand-blue transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>

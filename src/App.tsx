@@ -15,12 +15,43 @@ import { ContactPage } from './pages/ContactPage';
 
 import { FaqPage } from './pages/FaqPage';
 
-// Scroll to top on route change component
+import { CustomCursor } from './components/CustomCursor';
+
+// Scroll to top on route change component & scroll reveal animations
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Scroll reveal observer
+    const timer = setTimeout(() => {
+      const observerCallback: IntersectionObserverCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px',
+      });
+
+      const targets = document.querySelectorAll('.reveal-on-scroll, section > div, .grid > div');
+      targets.forEach((target) => {
+        if (!target.classList.contains('reveal-on-scroll')) {
+          target.classList.add('reveal-on-scroll');
+        }
+        observer.observe(target);
+      });
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;
@@ -40,6 +71,7 @@ export const AppContent: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-brand-dark flex flex-col justify-between font-sans selection:bg-brand-blue selection:text-white">
       
+      <CustomCursor />
       <ScrollToTop />
 
       {/* Header Navigation with logo and routing links */}

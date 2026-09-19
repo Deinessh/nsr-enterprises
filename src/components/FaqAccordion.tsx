@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { FAQS, COMPANY_INFO } from '../data/companyData';
 import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react';
 
-export const FaqAccordion: React.FC = () => {
+interface FaqAccordionProps {
+  showHeader?: boolean;
+}
+
+export const FaqAccordion: React.FC<FaqAccordionProps> = ({ showHeader = true }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -14,18 +18,20 @@ export const FaqAccordion: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm">
-            <HelpCircle className="w-3.5 h-3.5 text-brand-blue" />
-            <span className="text-xs font-bold uppercase tracking-wider">FREQUENTLY ASKED QUESTIONS</span>
+        {showHeader && (
+          <div className="text-center max-w-3xl mx-auto mb-16 p-8 sm:p-10 rounded-3xl section-header-bg border border-brand-blueBorder shadow-md space-y-3">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm">
+              <HelpCircle className="w-3.5 h-3.5 text-brand-blue" />
+              <span className="text-xs font-bold uppercase tracking-wider">FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
+              Got Questions About <span className="text-brand-blue">Bio Septic Tanks?</span>
+            </h2>
+            <p className="text-sm text-brand-muted leading-relaxed">
+              Here are verified technical answers regarding installation, capacities, materials, and long-term biological maintenance.
+            </p>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
-            Got Questions About <span className="text-brand-blue">Bio Septic Tanks?</span>
-          </h2>
-          <p className="text-sm text-brand-muted leading-relaxed">
-            Here are verified technical answers regarding installation, capacities, materials, and long-term biological maintenance.
-          </p>
-        </div>
+        )}
 
         {/* Accordion List */}
         <div className="space-y-4">

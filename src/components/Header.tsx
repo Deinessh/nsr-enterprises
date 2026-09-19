@@ -83,7 +83,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           {/* Logo Sized to Fit Comfortably in Header */}
           <Link to="/" className="flex items-center group py-0.5">
             <img 
-              src="/logo.png" 
+              src="/nsr_logo_official.png" 
               alt="NSR Enterprises Logo" 
               className="h-12 sm:h-14 lg:h-16 w-auto max-h-16 object-contain group-hover:scale-105 transition-transform duration-300" 
             />

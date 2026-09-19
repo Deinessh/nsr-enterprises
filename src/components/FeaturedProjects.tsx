@@ -6,9 +6,10 @@ import { MapPin, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
 interface FeaturedProjectsProps {
   onOpenQuoteModal?: (title?: string) => void;
   showAll?: boolean;
+  showHeader?: boolean;
 }
 
-export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ showAll = false }) => {
+export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ showAll = false, showHeader = true }) => {
   const [filter, setFilter] = useState<'All' | 'Residential' | 'Commercial' | 'Industrial'>('All');
 
   const filteredProjects = PROJECTS.filter(p => {
@@ -23,18 +24,20 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ showAll = fa
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centered Section Header with Mild Background Image Overlay */}
-        <div className="text-center max-w-3xl mx-auto mb-12 p-8 sm:p-10 rounded-3xl section-header-bg border border-brand-blueBorder shadow-md space-y-3">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-brand-blue" />
-            <span className="text-xs font-extrabold uppercase tracking-wider">SELECTED INSTALLATIONS</span>
+        {showHeader && (
+          <div className="text-center max-w-3xl mx-auto mb-12 p-8 sm:p-10 rounded-3xl section-header-bg border border-brand-blueBorder shadow-md space-y-3">
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-brand-blueBorder text-brand-blue shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-brand-blue" />
+              <span className="text-xs font-extrabold uppercase tracking-wider">SELECTED INSTALLATIONS</span>
+            </div>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
+              Featured <span className="text-brand-blue">Projects</span> & Installations
+            </h2>
+            <p className="text-xs sm:text-sm text-brand-muted leading-relaxed max-w-2xl mx-auto font-medium">
+              Explore turnkey bio septic tank installations across residential villas, commercial complexes, and industrial sites in Tamil Nadu.
+            </p>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
-            Featured <span className="text-brand-blue">Projects</span> & Installations
-          </h2>
-          <p className="text-xs sm:text-sm text-brand-muted leading-relaxed max-w-2xl mx-auto font-medium">
-            Explore turnkey bio septic tank installations across residential villas, commercial complexes, and industrial sites in Tamil Nadu.
-          </p>
-        </div>
+        )}
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap items-center gap-2 mb-10">

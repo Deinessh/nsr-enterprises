@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { COMPANY_INFO, buildWhatsAppLink } from '../data/companyData';
 import { Phone, Mail, MapPin, Send, AlertCircle, Clock, MessageSquare, Sparkles } from 'lucide-react';
-import { FaqAccordion } from '../components/FaqAccordion';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -38,7 +37,7 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-36 sm:pt-40 lg:pt-44 pb-20 bg-white text-brand-dark min-h-screen">
+    <div className="pt-[88px] md:pt-[96px] pb-20 bg-white text-brand-dark min-h-screen">
       
       {/* Contact Header Banner */}
       <section className="py-16 lg:py-20 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
@@ -55,9 +54,6 @@ export const ContactPage: React.FC = () => {
           </p>
         </div>
       </section>
-
-      {/* Requirement #1: Dedicated FAQ Section BEFORE Contact Section */}
-      <FaqAccordion />
 
       {/* Dedicated Contact Form & Info Section */}
       <section id="contact-details" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
@@ -141,7 +137,7 @@ export const ContactPage: React.FC = () => {
                 className="w-full py-4 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center justify-center space-x-2"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Chat Directly on WhatsApp (+91 82481 27235)</span>
+                <span>Chat Directly on WhatsApp</span>
               </a>
 
             </div>
@@ -269,10 +265,10 @@ export const ContactPage: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 text-sm font-bold text-white bg-gradient-to-r from-brand-blue to-brand-green hover:from-brand-blueDark hover:to-brand-greenDark rounded-2xl shadow-xl shadow-brand-blue/20 transition-all flex items-center justify-center space-x-2"
+                className="w-full py-4 px-6 text-sm font-bold text-white bg-gradient-to-r from-brand-blue via-brand-green to-emerald-600 hover:from-brand-blueDark hover:to-brand-greenDark rounded-2xl shadow-xl shadow-brand-blue/20 transition-all flex items-center justify-center space-x-2"
               >
                 <Send className="w-4 h-4" />
-                <span>Submit & Redirect to WhatsApp</span>
+                <span>Submit Enquiry</span>
               </button>
 
             </form>

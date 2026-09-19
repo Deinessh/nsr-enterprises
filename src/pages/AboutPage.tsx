@@ -11,7 +11,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
   const [showTamil, setShowTamil] = useState(false);
 
   return (
-    <div className="pt-36 sm:pt-40 pb-16 bg-white text-brand-dark min-h-screen">
+    <div className="pt-[88px] md:pt-[96px] pb-16 bg-white text-brand-dark min-h-screen">
       
       {/* About Hero Banner (Centered Alignment) */}
       <section className="py-16 lg:py-24 section-header-bg border-b border-brand-blueBorder relative overflow-hidden shadow-sm">
@@ -39,7 +39,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <div className="lg:col-span-6 relative">
               <div className="rounded-3xl overflow-hidden border border-brand-soft shadow-2xl">
                 <img 
-                  src="https://nsrenterprises.in/wp-content/uploads/2025/01/155-420x380.jpg" 
+                  src="/bio_septic_system_3d.jpg" 
                   alt="NSR Bio Septic Engineering" 
                   className="w-full h-[420px] object-cover"
                 />
